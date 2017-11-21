@@ -1,15 +1,19 @@
 var hangman;
 
 function Hangman() {
-
+  this.words = ['paciencia','pesadilla','ironhack'];
+  this.secretWord='';
+  this.letters = [];
 }
 
 Hangman.prototype._getWord = function () {
+  var word = Math.floor(Math.random() * this.words.length);
+  return this.secretWord = this.words[word];
 
 };
 
 Hangman.prototype._checkIfLetter = function(keyCode) {
-
+  return typeof(keyCode) === string;
 };
 
 Hangman.prototype._checkClickedLetters = function(key) {
